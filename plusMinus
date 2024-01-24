@@ -1,0 +1,26 @@
+public static void plusMinus(List<Integer> arr) {
+    // Write your code here
+        double pos = 0.0, neg = 0.0, zero = 0.0;
+        int arrSize = arr.size();
+        
+        for (int i = 0; i < arrSize; ++i) {
+            int value = arr.get(i);
+            if (value > 0) {
+                ++pos;
+            }
+            else if (value < 0) {
+                ++neg;
+            }
+            else {
+                ++zero;
+            }
+        }
+        
+        pos = pos / arrSize;
+        neg = neg / arrSize;
+        zero = zero / arrSize;
+        
+        System.out.println(String.format("%.6f", pos));
+        System.out.println(String.format("%.6f", neg));
+        System.out.println(String.format("%.6f", zero));
+    }
