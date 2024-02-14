@@ -1,0 +1,24 @@
+public static void miniMaxSum(List<Integer> arr) {
+    // Write your code here
+        int minIndex = 0, maxIndex = 0;
+        for (int i = 0; i < arr.size(); ++i) {
+            if (arr.get(i) < arr.get(minIndex)) {
+                minIndex = i;
+            }
+            else if (arr.get(i) > arr.get(maxIndex)) {
+                maxIndex = i;
+            }
+        }
+        
+        long minSum = 0, maxSum = 0;
+        for (int i = 0; i < arr.size(); ++i) {
+            if (i != minIndex) {
+                maxSum += arr.get(i);
+            }
+            if (i != maxIndex) {
+                minSum += arr.get(i);
+            }
+        }
+        
+        System.out.println(minSum + " " + maxSum);
+    }
