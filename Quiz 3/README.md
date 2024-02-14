@@ -1,1 +1,5 @@
-Quiz 3
+Time Complexity of MiniMaxSum Solution:
+The time complexity of my MiniMaxSum Solution would be O(n) if the given input were any input size and not specified in the problem statement to be fixed. This is because there are two for loops that iterates n times, where n is the size of the input array, with constant work (comparisons and assignments) inside each loop. Since the loops are not nested, each one is O(n), so together they are 2 O(n), whic is reduced to O(n) since a constant coefficient can be taken out of big O notation. All work outside the loops is constant (assignment, printing out the result, since it always prints two values). However, the time complexity in this case is actually O(5) (reduced to O(1)), or constant, since the input is specified as always being an array of size 5, so the input does not change.
+
+Space Complexity of MiniMaxSum Solution:
+The auxiliary space complexity (not including space to store the input) of my MiniMaxSum solution is O(1), or constant. This is because the only memory used, apart from the initial input, is constant (does not depend on the size of the input). There are always 2 ints and 2 longs stored, no matter the input size.
