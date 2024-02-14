@@ -1,0 +1,26 @@
+static int index = 0;
+     static String hackerrank = "hackerrank";
+
+    public static String hackerrankInString(String s) {
+    // Write your code here
+        System.out.println(s);
+        System.out.println(index);
+        if (s.length() < 1 || index == hackerrank.length()) {
+            if (index == hackerrank.length()) {
+                index = 0;
+                return "YES";
+            }
+            else {
+                index = 0;
+                return "NO";
+            }
+        }
+        else if (s.charAt(0) == hackerrank.charAt(index)) {
+            ++index;
+            if (index == hackerrank.length()) {
+                index = 0;
+                return "YES";
+            }
+        }
+        return hackerrankInString(s.substring(1, s.length()));
+    }
